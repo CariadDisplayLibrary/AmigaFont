@@ -15,6 +15,7 @@ AmigaFont::AmigaFont(const uint8_t *fd) : Font(fd) {
     struct Node *node = (struct Node *)&fd[0x24];
     uint32_t name = swap32(node->ln_Name);
     _header = (struct TextFont *)&fd[0x20 + name + 32];
+    _name = (const char *)&fd[0x20 + name + 1];
 }
 
 

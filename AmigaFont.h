@@ -45,6 +45,7 @@ struct TextFont {
 class AmigaFont : public Font {
     private:
         struct TextFont *_header;
+        const char *_name;
     public:
         AmigaFont(const uint8_t *fd);
 
@@ -54,6 +55,7 @@ class AmigaFont : public Font {
         uint8_t getStartGlyph();
         uint8_t getEndGlyph();
         int drawChar(DisplayCore *dev, int x, int y, uint8_t c, color_t fg, color_t bg);
+        const char *getName() { return _name; }
 
 };   
 
