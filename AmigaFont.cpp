@@ -81,7 +81,7 @@ int AmigaFont::drawChar(DisplayCore *dev, int x, int y, uint8_t c, color_t fg, c
         uint32_t spaceDataStart = 0x20 + swap32(_header->tf_CharSpace);
         space = _fontData[spaceDataStart + (c * 2)] << 8 | _fontData[spaceDataStart + (c * 2) + 1];
         uint32_t kernDataStart = 0x20 + swap32(_header->tf_CharKern);
-        kern = _fontData[spaceDataStart + (c * 2)] << 8 | _fontData[kernDataStart + (c * 2) + 1];
+        kern = _fontData[kernDataStart + (c * 2)] << 8 | _fontData[kernDataStart + (c * 2) + 1];
     }
 
     if (fg != bg) {
