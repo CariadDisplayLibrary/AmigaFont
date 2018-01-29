@@ -10,7 +10,7 @@ Section: libraries
 Architecture: all
 XBSC-Group: DisplayCore
 XBSC-Subgroup: Fonts
-Depends: libdisplaycore-displaycore
+Depends: libdisplaycore-core
 Provides: AmigaFont.h
 Description: AmigaFont library
  AmigaFont
