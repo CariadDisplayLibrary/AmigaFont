@@ -59,7 +59,7 @@ static inline uint8_t extractBit(const uint8_t *data, uint32_t offset) {
     return (data[b] & (0x80 >> o)) ? 1 : 0;
 }
 
-int AmigaFont::drawChar(DisplayCore *dev, int x, int y, uint8_t c, color_t fg, color_t bg) {
+int AmigaFont::drawChar(Cariad *dev, int x, int y, uint8_t c, color_t fg, color_t bg) {
 
     if (c < _header->tf_LoChar || c > _header->tf_HiChar) return 0;
 

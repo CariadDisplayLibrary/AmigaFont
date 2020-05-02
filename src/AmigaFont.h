@@ -1,7 +1,7 @@
 #ifndef _AMIGA_FONT
 #define _AMIGA_FONT
 
-#include <DisplayCore.h>
+#include <Cariad.h>
 
 struct Node {
     uint32_t    ln_Succ;  /* Pointer to next (successor) */
@@ -54,7 +54,7 @@ class AmigaFont : public Font {
         uint8_t getCharacterWidth(uint8_t glyph);
         uint8_t getStartGlyph();
         uint8_t getEndGlyph();
-        int drawChar(DisplayCore *dev, int x, int y, uint8_t c, color_t fg, color_t bg);
+        int drawChar(Cariad *dev, int x, int y, uint8_t c, color_t fg, color_t bg);
         const char *getName() { return _name; }
 
 };   
